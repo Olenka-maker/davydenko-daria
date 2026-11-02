@@ -1,0 +1,556 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    background: #fff;
+}
+
+.container {
+    width: min(1100px, 92%);
+    margin: 0 auto;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: #72003f;
+    border-bottom: 4px solid #b00068;
+}
+
+.nav-container {
+    min-height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.logo {
+    color: white;
+    text-decoration: none;
+
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.navigation a {
+    color: white;
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    transition: 0.2s;
+}
+
+.navigation a:hover {
+    color: #ffb4d7;
+}
+
+.menu-button {
+    display: none;
+
+    border: none;
+    background: transparent;
+    color: white;
+
+    font-size: 25px;
+    cursor: pointer;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 685px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(70, 0, 35, 0.35),
+            rgba(70, 0, 35, 0.45)
+        ),
+        url("./mmm.jpeg") center / cover no-repeat;
+}
+
+.hero-content {
+    width: min(800px, 90%);
+    color: white;
+}
+
+.hero h1 {
+    font-size: clamp(32px, 5vw, 58px);
+    line-height: 1.15;
+    margin-bottom: 20px;
+
+    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+}
+
+.hero p {
+    font-size: clamp(17px, 2vw, 23px);
+    margin-bottom: 32px;
+}
+
+.main-button,
+.booking-button {
+    display: inline-block;
+
+    border: none;
+    border-radius: 5px;
+
+    padding: 14px 28px;
+
+    background: #b00068;
+    color: white;
+
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.main-button:hover,
+.booking-button:hover {
+    background: #8d0054;
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   GENERAL SECTIONS
+========================= */
+
+.section {
+    padding: 75px 0;
+}
+
+.section h2 {
+    margin-bottom: 40px;
+
+    text-align: center;
+
+    color: #72003f;
+    font-size: 34px;
+}
+
+
+/* =========================
+   MENU
+========================= */
+
+.menu-section {
+    background: #fff;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.menu-card {
+    border: 1px solid #eee;
+    border-top: 5px solid #b00068;
+
+    padding: 25px;
+
+    background: white;
+
+    box-shadow: 0 5px 20px rgba(80, 0, 40, 0.08);
+}
+
+.menu-card h3 {
+    margin-bottom: 20px;
+    color: #72003f;
+    font-size: 20px;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+    padding: 13px 0;
+
+    border-bottom: 1px solid #eee;
+
+    font-size: 14px;
+}
+
+.menu-item:last-child {
+    border-bottom: none;
+}
+
+.menu-item span:last-child {
+    color: #a50061;
+    font-weight: bold;
+}
+
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery-section {
+    background: #faf7f9;
+}
+
+.gallery-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+.gallery-item {
+    overflow: hidden;
+
+    aspect-ratio: 1 / 0.78;
+
+    border: 5px solid white;
+
+    box-shadow: 0 4px 15px rgba(70, 0, 35, 0.15);
+}
+
+.gallery-image {
+    width: 100%;
+    height: 100%;
+
+    transition: transform 0.4s ease;
+}
+
+.gallery-item:hover .gallery-image {
+    transform: scale(1.08);
+}
+
+
+/*
+   Заміни ці картинки на власні
+   у папці images/
+*/
+
+.tea {
+    background:
+        linear-gradient(
+            rgba(255, 170, 200, 0.1),
+            rgba(255, 170, 200, 0.1)
+        ),
+        url("images/tea.jpg") center / cover;
+}
+
+.dessert {
+    background:
+        url("images/dessert.jpg") center / cover;
+}
+
+.sakura {
+    background:
+        url("images/sakura.jpg") center / cover;
+}
+
+.restaurant {
+    background:
+        url("images/restaurant.jpg") center / cover;
+}
+
+.drinks {
+    background:
+        url("images/drinks.jpg") center / cover;
+}
+
+.interior {
+    background:
+        url("images/interior.jpg") center / cover;
+}
+
+
+/* =========================
+   BOOKING
+========================= */
+
+.booking-section {
+    min-height: 650px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            rgba(55, 0, 28, 0.48),
+            rgba(55, 0, 28, 0.58)
+        ),
+        url("./mmm.jpeg") center / cover no-repeat;
+}
+
+.booking-overlay {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+
+    padding: 50px 20px;
+}
+
+.booking-box {
+    width: min(430px, 100%);
+
+    padding: 35px;
+
+    background: rgba(255, 255, 255, 0.97);
+
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.3);
+
+    border-radius: 4px;
+}
+
+.booking-box h2 {
+    margin-bottom: 25px;
+
+    text-align: center;
+
+    color: #72003f;
+
+    font-size: 30px;
+    line-height: 1.2;
+}
+
+.booking-box form {
+    display: flex;
+    flex-direction: column;
+}
+
+.booking-box label {
+    margin-bottom: 7px;
+
+    color: #4b0030;
+
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.booking-box input,
+.booking-box select {
+    width: 100%;
+
+    padding: 12px;
+
+    margin-bottom: 17px;
+
+    border: 1px solid #ccc;
+    border-radius: 3px;
+
+    background: white;
+
+    font-size: 14px;
+}
+
+.booking-box input:focus,
+.booking-box select:focus {
+    outline: none;
+    border-color: #b00068;
+    box-shadow: 0 0 0 2px rgba(176, 0, 104, 0.12);
+}
+
+.checkbox {
+    display: flex !important;
+    align-items: flex-start;
+
+    gap: 8px;
+
+    margin: 5px 0 20px;
+}
+
+.checkbox input {
+    width: auto;
+    margin: 2px 0 0;
+}
+
+.checkbox span {
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.booking-button {
+    width: 100%;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    padding: 16px;
+
+    background: #72003f;
+
+    text-align: center;
+
+    color: white;
+
+    font-size: 12px;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 800px) {
+
+    .navigation {
+        gap: 15px;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .hero {
+        min-height: 450px;
+    }
+}
+
+
+/* =========================
+   PHONE
+========================= */
+
+@media (max-width: 600px) {
+
+    .nav-container {
+        min-height: 55px;
+    }
+
+    .logo {
+        font-size: 13px;
+    }
+
+    .navigation {
+        display: none;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    .hero {
+        min-height: 420px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .section {
+        padding: 50px 0;
+    }
+
+    .section h2 {
+        font-size: 28px;
+        margin-bottom: 28px;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .gallery-item {
+        border-width: 3px;
+    }
+
+    .booking-section {
+        min-height: 600px;
+    }
+
+    .booking-box {
+        padding: 25px 20px;
+    }
+}
+
+
+/* =========================
+   SMALL PHONE
+========================= */
+
+@media (max-width: 380px) {
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .logo {
+        font-size: 12px;
+    }
+}
+
+
+.gallery-item {
+    overflow: hidden;
+    aspect-ratio: 1 / 0.78;
+    border: 5px solid white;
+    box-shadow: 0 4px 15px rgba(70, 0, 35, 0.15);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.08);
+}

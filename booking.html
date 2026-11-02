@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бронювання Sakura Restaurant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+    <div class="container nav-container">
+
+        <a href="index.html" class="logo">
+            Sakura Season Restaurant
+        </a>
+
+        <nav class="navigation">
+            <a href="index.html">Головна</a>
+            <a href="menu.html">Меню</a>
+            <a href="booking.html">Бронювання</a>
+        </nav>
+
+    </div>
+</header>
+
+<main>
+
+    <section class="booking-section">
+
+        <div class="booking-overlay">
+
+            <div class="booking-box">
+
+                <h2>Забронювати столик</h2>
+
+                <form>
+
+                    <label for="name">Ваше ім'я</label>
+                    <input type="text" id="name"
+                    placeholder="Введіть ім'я" required>
+
+                    <label for="phone">Номер телефону</label>
+                    <input type="tel" id="phone"
+                    placeholder="+380..." required>
+
+                    <label for="date">Дата</label>
+                    <input type="date" id="date" required>
+
+                    <label for="time">Час</label>
+                    <input type="time" id="time" required>
+
+                    <label for="guests">Кількість гостей</label>
+
+                    <select id="guests">
+                        <option>1 гість</option>
+                        <option>2 гості</option>
+                        <option>3 гості</option>
+                        <option>4 гості</option>
+                        <option>5 гостей</option>
+                        <option>6 гостей</option>
+                    </select>
+
+                    <label class="checkbox">
+                        <input type="checkbox" required>
+                        <span>
+                            Я погоджуюся з умовами бронювання
+                        </span>
+                    </label>
+
+                    <button type="submit" class="booking-button">
+                        Забронювати
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+<footer class="footer">
+    <p>© 2026 Sakura Season Restaurant</p>
+</footer>
+
+</body>
+</html>
